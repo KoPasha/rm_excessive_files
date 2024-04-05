@@ -54,7 +54,7 @@ def sortout_files_for_deletion(files_all,files_dif,files_pattern):
     return result
 
 def delete_files(files_to_delete):
-    if files_to_delete.count() == 0:
+    if len(files_to_delete) == 0:
         print('Havn\'t found any files for deletion')
     for cur_file in files_to_delete:
         if cur_file != '' and os.path.exists(cur_file):
