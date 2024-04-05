@@ -56,12 +56,13 @@ def sortout_files_for_deletion(files_all,files_dif,files_pattern):
 def delete_files(files_to_delete):
     if len(files_to_delete) == 0:
         print('Havn\'t found any files for deletion')
-    for cur_file in files_to_delete:
-        if cur_file != '' and os.path.exists(cur_file):
-            os.remove(cur_file)
-            print('file {} is removed'.format(cur_file))
-        else:
-            print('file {} does not exist'.format(cur_file))
+    else:
+        for cur_file in files_to_delete:
+            if cur_file != '' and os.path.exists(cur_file):
+                os.remove(cur_file)
+                print('file {} is removed'.format(cur_file))
+            else:
+                print('file {} does not exist'.format(cur_file))
 
 if __name__ == '__main__':
     main()
